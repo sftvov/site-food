@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /*null*/
 * {
@@ -278,6 +279,7 @@ body {
       -ms-flex: 1;
           flex: 1;
   max-width: 1200px;
+  margin-top: 56px;
 }
 
 .main-content__head {
@@ -397,10 +399,12 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: #ffc107;
+  margin-right: 26px;
 }
 
 .item__rating:before {
-  content: url(img/star.png);
+  content: url("/img/star.png");
+  margin-right: 8px;
 }
 
 .item__price {
@@ -414,6 +418,11 @@ body {
   color: #8c8c8c;
 }
 
+.item__price:after {
+  content: '₽';
+  margin: 0 11px 0 4px;
+}
+
 .item__category {
   font-family: Roboto;
   font-size: 18px;
@@ -423,4 +432,11 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: #8c8c8c;
+}
+
+.item__category:before {
+  position: relative;
+  bottom: 3px;
+  content: url("/img/ellipse.png");
+  margin-right: 10px;
 }

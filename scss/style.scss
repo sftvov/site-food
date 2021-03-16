@@ -117,6 +117,7 @@ body {
 	align-items: center;
 	flex: 1;
 	max-width: 1200px;
+	margin-top: 56px;
 	&__head {
 		display: flex;
 		align-items: center;
@@ -208,8 +209,10 @@ body {
 		letter-spacing: 0em;
 		text-align: left;
 		color: #ffc107;
+		margin-right: 26px;
 		&:before {
-			content: url(img/star.png);
+			content: url('/img/star.png');
+			margin-right: 8px;
 		}
 	}
 
@@ -222,6 +225,10 @@ body {
 		letter-spacing: 0em;
 		text-align: left;
 		color: #8c8c8c;
+		&:after {
+			content: '₽';
+			margin: 0 11px 0 4px;
+		}
 	}
 
 	&__category {
@@ -233,5 +240,11 @@ body {
 		letter-spacing: 0em;
 		text-align: left;
 		color: #8c8c8c;
+		&:before {
+			position: relative;
+			bottom: 3px;
+			content: url('/img/ellipse.png');
+			margin-right: 10px;
+		}
 	}
 }
