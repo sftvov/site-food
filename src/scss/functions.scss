@@ -1,0 +1,20 @@
+@import 'funcs/popup.scss';
+@import 'funcs/loading.scss';
+@import 'funcs/lightgallery.scss';
+@import 'funcs/swiper/sw.scss';
+
+._tabs-block {
+	display: none;
+	&._active {
+		display: block;
+	}
+}
+
+body._lock {
+	overflow: hidden;
+}
+
+._visible {
+	visibility: visible;
+	opacity: 1;
+}

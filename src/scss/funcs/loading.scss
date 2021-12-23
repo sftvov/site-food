@@ -1,0 +1,12 @@
+.loading {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #{$colorText + e6} url('../img/icons/loading.gif') center / 50px no-repeat;
+	z-index: 100;
+	visibility: hidden;
+	opacity: 0;
+}

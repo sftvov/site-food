@@ -1,0 +1,28 @@
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//Адаптивное свойство
+@mixin adaptiv-value($property, $defaultSize, $startSize, $minSize, $startWidth, $endWidth, $measure) {
+	#{$property}: $defaultSize + $measure;
+	@media (max-width: #{$startWidth + $measure}) {
+		#{$property}: calc(#{$minSize + $measure} + #{$startSize - $minSize} * ((100vw - #{$endWidth + $measure}) / #{$startWidth - $endWidth}));
+	}
+	@media (max-width: #{$endWidth + $measure}) {
+		#{$property}: $minSize + $measure;
+	}
+}
+
+@mixin common-value($property, $multi) {
+	#{$property}: #{5 * $multi + px};
+	@media (max-width: $md1+px) {
+		#{$property}: calc(#{2px * $multi} + #{3 * $multi} * ((100vw - #{$minWidth + px}) / (#{$md1 - $minWidth})));
+	}
+}
