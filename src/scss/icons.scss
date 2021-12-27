@@ -14,27 +14,15 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-._icon-arrow:before {
+._icon-login:before {
 	content: '\e900';
 }
-._icon-cross:before {
+._icon-basket:before {
 	content: '\e901';
 }
-._icon-quotes:before {
+._icon-search:before {
 	content: '\e902';
 }
 ._icon-star:before {
-	content: '\e905';
-}
-._icon-insta:before {
-	content: '\e907';
-}
-._icon-search:before {
-	content: '\e912';
-}
-._icon-basket:before {
-	content: '\e913';
-}
-._icon-login:before {
-	content: '\e914';
+	content: '\e903';
 }

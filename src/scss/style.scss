@@ -3,15 +3,17 @@
 
 $fontFamily: 'Gilroy';
 $minWidth: 375;
-$maxWidth: 1904;
-$maxWidthContainer: 1660;
+$maxWidth: 1440;
+
+$maxWidthContainer: 1600;
+
 $md1: $maxWidthContainer + 39.95;
-$md2: 1219.95;
+$md2: 1439.95;
 $md3: 739.95;
 
 @import 'customize';
 @import 'null';
-// @import 'icons';
+@import 'icons';
 
 .wrapper {
 	position: relative;
@@ -51,15 +53,13 @@ $md3: 739.95;
 ._container {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
-
 	@media (max-width: $md1+px) {
-		max-width: $md2 - 39.95 + px;
+		max-width: $md2 - 239.95 + px;
 	}
+	// @media (max-width: $md2+px) {
+	// 	max-width: $md3 - 39.95 + px;
+	// }
 	@media (max-width: $md2+px) {
-		max-width: $md3 - 39.95 + px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: $md3 + 0.05 + px;
 		padding-left: 17.5px;
 		padding-right: 17.5px;
 	}
