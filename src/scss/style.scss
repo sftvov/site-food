@@ -1,15 +1,22 @@
 @import 'mixins';
 @import 'fonts';
 
-$fontFamily: 'Gilroy';
-$minWidth: 375;
-$maxWidth: 1440;
+$fontFamily: 'SFProdisplay';
+$minWidth: 300;
+$maxWidth: 1840;
 
 $maxWidthContainer: 1600;
+$laptopContainer: 1200;
+$padContainer: 800;
+$mobileContainer: $minWidth - 20;
 
 $md1: $maxWidthContainer + 39.95;
-$md2: 1439.95;
-$md3: 739.95;
+$md2: $laptopContainer + 39.95;
+$md3: $padContainer + 39.95;
+
+// $md1: $maxWidthContainer + 39.95;
+// $md2: 1439.95;
+// $md3: 739.95;
 
 @import 'customize';
 @import 'null';
@@ -54,17 +61,24 @@ $md3: 739.95;
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
 	@media (max-width: $md1+px) {
-		max-width: $md2 - 239.95 + px;
+		max-width: $laptopContainer + px;
 	}
-	// @media (max-width: $md2+px) {
-	// 	max-width: $md3 - 39.95 + px;
-	// }
 	@media (max-width: $md2+px) {
-		padding-left: 17.5px;
-		padding-right: 17.5px;
+		max-width: $padContainer + px;
 	}
+	@media (max-width: $md3+px) {
+		max-width: $mobileContainer + px;
+	}
+	// @media (max-width: $md3+px) {
+	// 	padding-left: 17.5px;
+	// 	padding-right: 17.5px;
+	// }
 }
 
 // @import 'functions';
 @import 'header';
+
+@import 'blocks/banner';
+@import 'blocks/shops';
+
 @import 'footer';
