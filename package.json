@@ -26,6 +26,7 @@
 		"gulp-webp": "^4.0.1",
 		"gulp-webp-html": "^1.0.2",
 		"gulp-webpcss": "^1.1.1",
-		"webp-converter": "^2.2.3"
+		"webp-converter": "^2.2.3",
+		"gulp-version-number": "^0.2.4"
 	}
 }

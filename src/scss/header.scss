@@ -1,24 +1,68 @@
 .header {
-	z-index: 100;
-	position: fixed;
 	width: 100%;
-	transition: background-color 0.4s ease;
-
+	padding-top: 44px;
 	&__container {
 	}
 
 	&__body {
+		width: 100%;
 		display: flex;
-		align-items: center;
-		@media (min-width: $md1+px) {
-			min-height: 160px;
-		}
+		justify-content: space-between;
+		flex-wrap: wrap;
 		@media (min-width: $md2+px) {
-			min-height: 113px;
+			column-gap: 87px;
 		}
-		@media (min-width: $md3+px) {
-			min-height: 143px;
+		row-gap: 40.3px;
+	}
+
+	&__logo {
+	}
+
+	&__search {
+	}
+
+	&__buttons {
+		display: flex;
+		column-gap: 10px;
+		& span {
+			@media (max-width: $md3+px) {
+				display: none;
+			}
 		}
-		min-height: 70px;
+	}
+}
+
+.logo {
+	margin-right: 15px;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	padding: 10px 9px;
+	border: 1px solid $borderGray;
+	@media (max-width: $md2+px) {
+		order: 1;
+		flex-basis: 100%;
+	}
+	& svg {
+	}
+
+	&__input {
+		font-size: 16px;
+		line-height: 24px;
+		flex-basis: 100%;
+		padding-left: 4px;
+		&::placeholder {
+			color: $colorTextLight;
+		}
+	}
+}
+.buttons {
+	&__log-in-btn {
+	}
+
+	&__basket-btn {
 	}
 }

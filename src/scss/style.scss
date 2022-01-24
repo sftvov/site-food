@@ -8,7 +8,7 @@ $maxWidth: 1840;
 $maxWidthContainer: 1600;
 $laptopContainer: 1200;
 $padContainer: 800;
-$mobileContainer: $minWidth - 20;
+// $mobileContainer: $minWidth - 20;
 
 $md1: $maxWidthContainer + 39.95;
 $md2: $laptopContainer + 39.95;
@@ -49,7 +49,7 @@ $md3: $padContainer + 39.95;
 .page {
 	min-width: 0;
 	min-height: 0;
-	max-width: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -66,13 +66,13 @@ $md3: $padContainer + 39.95;
 	@media (max-width: $md2+px) {
 		max-width: $padContainer + px;
 	}
-	@media (max-width: $md3+px) {
-		max-width: $mobileContainer + px;
-	}
 	// @media (max-width: $md3+px) {
-	// 	padding-left: 17.5px;
-	// 	padding-right: 17.5px;
+	// 	max-width: $mobileContainer + px;
 	// }
+	@media (max-width: $md3+px) {
+		padding-left: 17.5px;
+		padding-right: 17.5px;
+	}
 }
 
 // @import 'functions';
