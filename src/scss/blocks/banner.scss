@@ -6,20 +6,36 @@
 		height: 300px;
 		position: relative;
 		background-color: $colorMain;
+		@media (max-width: $md3+px) {
+			padding: 0;
+		}
 	}
 
 	&__offer {
 		color: $colorTextDark;
 		font-family: 'Roboto';
 		position: absolute;
-		top: 50%;
-		left: 70.84px;
-		transform: translateY(-50%);
-		row-gap: 15.29px;
 		max-width: 540px;
+		@media (min-width: $md3+px) {
+			top: 50%;
+			transform: translateY(-50%);
+			left: 70.84px;
+			row-gap: 15.29px;
+		}
 		@media (max-width: $md2+px) {
-			background-color: #{$white + '80'};
-			padding: 10px;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 50%;
+			height: 100%;
+			padding: 17.5px;
+		}
+		@media (max-width: $md3+px) {
+			max-width: 265px;
+		}
+		@media (max-width: $md4+px) {
+			max-width: 100%;
 		}
 	}
 
@@ -28,11 +44,23 @@
 		line-height: 46px;
 		font-weight: 700;
 		margin-bottom: 15.29px;
+		@media (max-width: $md2+px) {
+			font-size: 32px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 26px;
+		}
 	}
 
 	&__description {
 		font-size: 24px;
 		line-height: 28px;
+		@media (max-width: $md2+px) {
+			font-size: 20px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 16px;
+		}
 	}
 
 	&__picture {
@@ -40,5 +68,8 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: right;
+		@media (max-width: $md4+px) {
+			object-position: center;
+		}
 	}
 }

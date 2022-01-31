@@ -52,17 +52,17 @@ function spaceForMobileMenu() {
 
 // ----------------------------------------------------------------------
 
-window.onresize = () => {
-  addTouchClassForMobile();
-	spaceForHeader();
-	spaceForMobileMenu();
-  closeBurger();
-}
+// window.onresize = () => {
+//   addTouchClassForMobile();
+// 	spaceForHeader();
+// 	spaceForMobileMenu();
+//   closeBurger();
+// }
 
-window.onload = () => {	
-	addTouchClassForMobile();
-	spaceForHeader();
-	spaceForMobileMenu();
-}
+// window.onload = () => {	
+// 	addTouchClassForMobile();
+// 	spaceForHeader();
+// 	spaceForMobileMenu();
+// }
 
 // ----------------------------------------------------------------------
