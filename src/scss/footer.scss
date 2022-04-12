@@ -1,5 +1,34 @@
 .footer {
 	width: 100%;
-	color: $colorLight;
-	background-color: $colorMain;
+	&__container {
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		@include common-value('padding-top', 60.6);
+		@include common-value('padding-bottom', 60.19);
+	}
+
+	&__logo {
+		@include common-value('margin-right', 35.59);
+	}
+
+	&__items {
+		line-height: (21/18);
+		display: flex;
+		@include common-value('column-gap', 15);
+		flex-grow: 1;
+	}
+
+	&__item {
+	}
+
+	&__soc-block {
+		display: flex;
+		align-items: center;
+		@include common-value('column-gap', 15);
+	}
+
+	&__soc-link {
+	}
 }

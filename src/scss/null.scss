@@ -19,7 +19,7 @@ a {
 	text-decoration: none;
 	&:hover,
 	&:active {
-		color: $colorMainHover;
+		color: inherit;
 	}
 }
 aside,

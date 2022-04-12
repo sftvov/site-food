@@ -1,33 +1,39 @@
-$colorSecond: #fff7e1;
-$colorLight: #ffffff;
-$colorMainHover: #e2a300;
-$colorLinkHover: #e2a300;
-$colorAlert: #ff3451;
-
-$black: #262626;
-$white: #ffffff;
-$blue: #1890ff;
-$borderGray: #d9d9d9;
 $colorMain: #fff1b8;
+$black: #000000;
+$dark: #262626;
 $colorTextDark: #302c34;
-$colorText: #595959;
 $colorTextGray: #8c8c8c;
 $colorTextLight: #bfbfbf;
+$borderGray: #d9d9d9;
+$whiteNew: #fafafa;
+$white: #ffffff;
+$blue: #1890ff;
+$darkBlue: #1976d2;
+$mediumBlue: #1e88e5;
+$lightBlue: #40a9ff;
 $colorBright: #ffc107;
+$gBW: linear-gradient(180deg, #ffffff 1.04%, #f5f5f5 100%);
+$gORP1: linear-gradient(45deg, #ffc107 14.64%, #f44336 50.49%, #9c27b0 84.64%);
+$gORP2: linear-gradient(45deg, #ffc107 9.15%, #f44336 50.57%, #9c27b0 90.03%);
+$gORP3: linear-gradient(45deg, #ffc107 14.65%, #f44336 50.49%, #9c27b0 84.65%);
+$blackT: #00000066;
 
-x body {
-	color: $colorText;
-	@media (min-width: $md1+px) {
-		font-size: 25px;
-	}
-	@media (min-width: $md2+px) {
-		font-size: 18px;
-	}
+body {
+	color: $colorTextDark;
+	// @media (min-width: $md1+px) {
+	// 	font-size: 20px;
+	// }
+	// @media (min-width: $md2+px) {
+	// 	font-size: 18px;
+	// }
 	@media (min-width: $md3+px) {
-		font-size: 32px;
+		font-size: 20px;
 	}
-	font-size: 16px;
-	line-height: 1.4;
+	@media (min-width: $md4+px) {
+		font-size: 16px;
+	}
+	font-size: 14px;
+	line-height: 1.2;
 	font-weight: 500;
 	letter-spacing: 0em;
 	font-style: normal;
@@ -35,6 +41,7 @@ x body {
 ._button {
 	transition: all 0.3s ease;
 	cursor: pointer;
+	font-family: 'SFProdisplay';
 	font-size: 16px;
 	line-height: 24px;
 	display: flex;
@@ -52,7 +59,7 @@ x body {
 		box-shadow: 0 0px 2px #{$black + '40'};
 	}
 	&--white {
-		color: $colorText;
+		color: $colorTextDark;
 		background-color: $white;
 		border: 1px solid $borderGray;
 		box-shadow: 0 0 2px #{$black + '15'};
@@ -60,6 +67,52 @@ x body {
 			color: $colorTextGray;
 		}
 	}
+}
+
+h1 {
+	@media (min-width: $md2+px) {
+		font-size: 39/20 + em;
+		line-height: (45.7/39);
+	}
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+h2 {
+	@media (min-width: $md2+px) {
+		font-size: 36/20 + em;
+		line-height: (42.19/36);
+	}
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+._fs24 {
+	@media (min-width: $md2+px) {
+		font-size: 24/20 + em;
+		line-height: (28/24);
+	}
+	font-size: 1.1em;
+}
+._fs18 {
+	@media (min-width: $md2+px) {
+		font-size: 18/20 + em;
+	}
+	font-size: 1em;
+}
+._fs16 {
+	@media (min-width: $md2+px) {
+		font-size: 16/20 + em;
+		line-height: (24/16);
+	}
+	font-size: 0.9em;
+}
+._fs12 {
+	@media (min-width: $md2+px) {
+		font-size: 12/20 + em;
+		line-height: (20/12);
+	}
+	font-size: 0.8em;
 }
 
 // ._button--main {

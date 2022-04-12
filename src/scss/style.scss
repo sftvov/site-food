@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'fonts';
 
-$fontFamily: 'SFProdisplay';
+$fontFamily: 'Roboto';
 $minWidth: 300;
 $maxWidth: 1840;
 
@@ -13,14 +13,14 @@ $padContainer: 800;
 $md1: $maxWidthContainer + 39.95;
 $md2: $laptopContainer + 39.95;
 $md3: $padContainer + 39.95;
-$md4: 671.95;
+$md4: 539.95;
 
 // $md1: $maxWidthContainer + 39.95;
 // $md2: 1439.95;
 // $md3: 739.95;
 
-@import 'customize';
 @import 'null';
+@import 'customize';
 @import 'icons';
 
 .wrapper {
@@ -56,23 +56,30 @@ $md4: 671.95;
 	align-items: center;
 	justify-content: flex-start;
 	flex: 1 1 auto;
+	background: $gBW;
 }
 
 ._container {
-	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
-	@media (max-width: $md1+px) {
+	@media (min-width: $md1+px) {
+		max-width: $maxWidthContainer + px;
+	}
+	@media (min-width: $md2+px) {
 		max-width: $laptopContainer + px;
 	}
-	@media (max-width: $md2+px) {
+	@media (min-width: $md3+px) {
 		max-width: $padContainer + px;
 	}
 	// @media (max-width: $md3+px) {
 	// 	max-width: $mobileContainer + px;
 	// }
 	@media (max-width: $md3+px) {
-		padding-left: 17.5px;
-		padding-right: 17.5px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media (max-width: $md4+px) {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 

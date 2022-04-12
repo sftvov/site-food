@@ -1,75 +1,54 @@
 .banner {
 	width: 100%;
-	margin-top: 40.3px;
+	@include common-value('margin-top', 40.3);
 	&__container {
-		width: 100%;
-		height: 300px;
-		position: relative;
+		display: flex;
+		@media (min-width: $md1+px) {
+			min-height: 400px;
+		}
+		@media (min-width: $md2+px) {
+			min-height: 300px;
+		}
+		@media (min-width: $md4+px) {
+			min-height: 250px;
+		}
+		background-image: url(/img/first-banner.png);
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
 		background-color: $colorMain;
 		@media (max-width: $md3+px) {
-			padding: 0;
+			background-position-x: calc(40 * (100vw - 540px) / 299 - 250px);
+		}
+		@media (max-width: $md4+px) {
+			background-position-x: calc(19 * (100vw - 300px) / 239 - 260px);
+		}
+		@media (max-width: $minWidth+px) {
+			background-position-x: -260px;
 		}
 	}
 
 	&__offer {
-		color: $colorTextDark;
-		font-family: 'Roboto';
-		position: absolute;
-		max-width: 540px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media (min-width: $md2+px) {
+			max-width: 540px;
+		}
 		@media (min-width: $md3+px) {
-			top: 50%;
-			transform: translateY(-50%);
-			left: 70.84px;
-			row-gap: 15.29px;
+			margin: 40px 70.84px;
 		}
-		@media (max-width: $md2+px) {
-			left: 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			max-width: 50%;
-			height: 100%;
-			padding: 17.5px;
+		@media (min-width: $md4+px) {
+			max-width: 340px;
 		}
-		@media (max-width: $md3+px) {
-			max-width: 265px;
-		}
-		@media (max-width: $md4+px) {
-			max-width: 100%;
-		}
+		margin: 50px 0;
+		max-width: 237px;
 	}
 
 	&__title {
-		font-size: 39px;
-		line-height: 46px;
-		font-weight: 700;
-		margin-bottom: 15.29px;
-		@media (max-width: $md2+px) {
-			font-size: 32px;
-		}
-		@media (max-width: $md4+px) {
-			font-size: 26px;
-		}
+		@include common-value('margin-bottom', 15.29);
 	}
 
 	&__description {
-		font-size: 24px;
-		line-height: 28px;
-		@media (max-width: $md2+px) {
-			font-size: 20px;
-		}
-		@media (max-width: $md4+px) {
-			font-size: 16px;
-		}
-	}
-
-	&__picture {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: right;
-		@media (max-width: $md4+px) {
-			object-position: center;
-		}
 	}
 }

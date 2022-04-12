@@ -1,6 +1,6 @@
 .header {
 	width: 100%;
-	padding-top: 44px;
+	@include common-value('padding-top', 44);
 	&__container {
 	}
 
@@ -12,10 +12,11 @@
 		@media (min-width: $md2+px) {
 			column-gap: 87px;
 		}
-		row-gap: 40.3px;
+		@include common-value('row-gap', 40.3);
 	}
 
 	&__logo {
+		margin-right: 15px;
 	}
 
 	&__search {
@@ -31,17 +32,13 @@
 		}
 	}
 }
-
-.logo {
-	margin-right: 15px;
-}
-
 .search {
 	display: flex;
 	align-items: center;
 	flex-grow: 1;
 	padding: 10px 9px;
 	border: 1px solid $borderGray;
+	border-radius: 2px;
 	@media (max-width: $md2+px) {
 		order: 1;
 		flex-basis: 100%;
@@ -50,6 +47,7 @@
 	}
 
 	&__input {
+		font-family: 'SFProdisplay';
 		font-size: 16px;
 		line-height: 24px;
 		flex-basis: 100%;
