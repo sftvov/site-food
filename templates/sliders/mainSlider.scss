@@ -1,0 +1,54 @@
+.big-slider {
+	position: relative;
+	width: 100%;
+
+	&__title {
+		text-align: center;
+	}
+
+	& ._simpleSlider {
+		height: 100vh;
+	}
+
+	& ._thumbsSlider {
+		height: 500px;
+		& img {
+			object-fit: contain;
+		}
+	}
+
+	& ._miniThumbsSlider {
+		@media (min-width: $md1+px) {
+			height: 25vh;
+		}
+		@media (min-width: $md2+px) {
+			height: 15vh;
+		}
+		height: 10vh;
+		padding-top: 10px;
+		& .swiper-slide {
+			transition: opacity 0.4s ease-in;
+			opacity: 0.5;
+			&.swiper-slide-thumb-active {
+				opacity: 1;
+			}
+		}
+	}
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__swiper {
+		// height: 100%;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		z-index: 1;
+		background-color: #{$colorTextLight + '40'};
+		padding: 10px;
+	}
+}

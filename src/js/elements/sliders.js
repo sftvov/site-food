@@ -1,35 +1,41 @@
-@@include('libs/swiper.min.js');
+@@include('../libs/swiper.min.js');
 
-let slider = new Swiper('.our-doctors__slider', {
+let simpleSlider = new Swiper('._simpleSlider', {
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
 	// autoHeight: true,
-	// spaceBetween: 0,
+	spaceBetween: 20,
 	speed: 800,
 	// touchRatio: 2,
-	simulateTouch: false,
-	// grabCursor: true,
+	simulateTouch: true,
+	grabCursor: true,
 	// Dotts
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'fraction',
-	},
+	// pagination: {
+	// 	el: '.swiper-pagination',
+	// 	type: 'fraction',
+	// },
 	initialSlide: 1,
-	effect: 'fade',
+	// effect: 'fade',
 	// Arrows
-	navigation: {
-		nextEl: '.next-round',
-		prevEl: '.prev-round',
-	},
-	controller: {
-		control: mini_slider,
-	},
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
+	// controller: {
+	// 	control: mini_slider,
+	// },
+	// thumbs: {
+	// 	swiper: {
+	// 		el: ".miniMain-slider__swiper",
+	// 		slidesPerView: 3
+	// 	}
+	// },
 	// autoplay: {
 	// 	delay: 3000,
 	// 	disableOnInteraction: true,
 	// },	
-	//loop: true,
+	loop: true,
 	//preloadImages: false,
 	//lazy: true,
 	/*
@@ -62,4 +68,51 @@ let slider = new Swiper('.our-doctors__slider', {
 	//scrollbar: {
 	//	el: '.swiper-scrollbar',
 	//},
+
+});
+
+// let photogallery = new Swiper('.photogallery__slider', {
+// 	// autoplay: {
+// 	// 	delay: 1000,
+// 	// 	disableOnInteraction: true,
+// 	// },
+// 	observer: true,
+// 	observeParents: true,
+// 	grabCursor: true,
+// 	slidesPerView:2,
+// 	spaceBetween: 20,
+// 	pagination: {
+// 		el: '.swiper-pagination',
+// 		clickable: true,
+// 	},
+// 	breakpoints: {
+// 		839.95: {
+// 			slidesPerView: 3,
+// 		},
+// 		1639.95: {
+// 			slidesPerView: 4,
+// 		},
+// 	},
+// });
+
+let thumbsSlider = new Swiper('._thumbsSlider', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	speed: 800,
+	simulateTouch: true,
+	grabCursor: true,
+	initialSlide: 1,
+	loop: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: {
+			el: "._miniThumbsSlider",
+			slidesPerView: 5,
+		}
+	},
 });

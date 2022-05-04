@@ -1,27 +1,8 @@
-@import 'mixins';
-@import 'fonts';
-
-$fontFamily: 'Roboto';
-$minWidth: 300;
-$maxWidth: 1840;
-
-$maxWidthContainer: 1600;
-$laptopContainer: 1200;
-$padContainer: 800;
-// $mobileContainer: $minWidth - 20;
-
-$md1: $maxWidthContainer + 39.95;
-$md2: $laptopContainer + 39.95;
-$md3: $padContainer + 39.95;
-$md4: 539.95;
-
-// $md1: $maxWidthContainer + 39.95;
-// $md2: 1439.95;
-// $md3: 739.95;
-
+@import 'scss-tools';
+@import '../fonts/icons/fonts';
+@import '../fonts/Roboto/fonts';
+@import '../fonts/SF-Pro-Display/fonts';
 @import 'null';
-@import 'customize';
-@import 'icons';
 
 .wrapper {
 	position: relative;
@@ -46,7 +27,6 @@ $md4: 539.95;
 	// 	}
 	// }
 }
-
 .page {
 	min-width: 0;
 	min-height: 0;
@@ -56,37 +36,11 @@ $md4: 539.95;
 	align-items: center;
 	justify-content: flex-start;
 	flex: 1 1 auto;
-	background: $gBW;
 }
 
-._container {
-	margin: 0 auto;
-	@media (min-width: $md1+px) {
-		max-width: $maxWidthContainer + px;
-	}
-	@media (min-width: $md2+px) {
-		max-width: $laptopContainer + px;
-	}
-	@media (min-width: $md3+px) {
-		max-width: $padContainer + px;
-	}
-	// @media (max-width: $md3+px) {
-	// 	max-width: $mobileContainer + px;
-	// }
-	@media (max-width: $md3+px) {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	@media (max-width: $md4+px) {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-}
+@import 'css-settings/icons';
+@import 'css-settings/customize';
+@import 'css-settings/functions';
 
-// @import 'functions';
-@import 'header';
-
-@import 'blocks/banner';
-@import 'blocks/shops';
-
-@import 'footer';
+@import 'section-styles/header';
+@import 'section-styles/footer';

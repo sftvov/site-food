@@ -1,0 +1,66 @@
+.header {
+	width: 100%;
+	@include common-value('padding-top', 44);
+	&__container {
+	}
+
+	&__body {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@media (min-width: $md2+px) {
+			column-gap: 87px;
+		}
+		@include common-value('row-gap', 40.3);
+	}
+
+	&__logo {
+		margin-right: 15px;
+	}
+
+	&__search {
+	}
+
+	&__buttons {
+		display: flex;
+		column-gap: 10px;
+		& span {
+			@media (max-width: $md3+px) {
+				display: none;
+			}
+		}
+	}
+}
+.search {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	padding: 10px 9px;
+	border: 1px solid $borderGray;
+	border-radius: 2px;
+	@media (max-width: $md2+px) {
+		order: 1;
+		flex-basis: 100%;
+	}
+	& svg {
+	}
+
+	&__input {
+		font-family: 'SF-Pro-Display';
+		font-size: 16px;
+		line-height: 24px;
+		flex-basis: 100%;
+		padding-left: 4px;
+		&::placeholder {
+			color: $colorTextLight;
+		}
+	}
+}
+.buttons {
+	&__log-in-btn {
+	}
+
+	&__basket-btn {
+	}
+}

@@ -1,0 +1,38 @@
+$colorMain: #fff1b8;
+$colorTextDark: #302c34;
+$colorTextGray: #8c8c8c;
+$colorTextLight: #bfbfbf;
+$colorBright: #ffc107;
+
+$black: #000000;
+$dark: #262626;
+$borderGray: #d9d9d9;
+$whiteNew: #fafafa;
+$white: #ffffff;
+$blue: #1890ff;
+$darkBlue: #1976d2;
+$mediumBlue: #1e88e5;
+$lightBlue: #40a9ff;
+$gBW: linear-gradient(180deg, #ffffff 1.04%, #f5f5f5 100%);
+$gORP1: linear-gradient(45deg, #ffc107 14.64%, #f44336 50.49%, #9c27b0 84.64%);
+$gORP2: linear-gradient(45deg, #ffc107 9.15%, #f44336 50.57%, #9c27b0 90.03%);
+$gORP3: linear-gradient(45deg, #ffc107 14.65%, #f44336 50.49%, #9c27b0 84.65%);
+$blackT: #00000066;
+
+$fontFamily: 'Roboto';
+$minWidth: 300;
+$maxWidth: 1840;
+
+$maxWidthContainer: 1600;
+$laptopContainer: 1200;
+$padContainer: 800;
+// $mobileContainer: $minWidth - 20;
+
+$md1: $maxWidthContainer + 39.95;
+$md2: $laptopContainer + 39.95;
+$md3: $padContainer + 39.95;
+$md4: 539.95;
+
+// $md1: $maxWidthContainer + 39.95;
+// $md2: 1439.95;
+// $md3: 739.95;

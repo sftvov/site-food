@@ -1,6 +1,7 @@
 let project_folder = 'dist',
 	source_folder = 'src',
-	fs = require('fs');
+	font_names = '{icons,Roboto,SF-Pro-Display}';
+fs = require('fs');
 
 let path = {
 	build: {
@@ -12,10 +13,11 @@ let path = {
 	},
 	src: {
 		html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
-		css: source_folder + '/scss/style.scss',
+		css: [source_folder + '/scss/style.scss', source_folder + '/scss/page-styles/*.scss'],
 		js: source_folder + '/js/script.js',
 		img: source_folder + '/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
-		fonts: source_folder + '/fonts/*.ttf',
+		ttf: source_folder + '/fonts/' + font_names + '/*.ttf',
+		woff: source_folder + '/fonts/' + font_names + '/*.{woff,woff2}',
 	},
 	watch: {
 		html: source_folder + '/**/*.html',
@@ -134,8 +136,9 @@ function images() {
 }
 
 function fonts() {
-	src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
-	return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
+	src(path.src.woff).pipe(dest(path.build.fonts));
+	src(path.src.ttf).pipe(ttf2woff()).pipe(dest(path.build.fonts));
+	return src(path.src.ttf).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
 }
 
 gulp.task('otf2ttf', function () {
@@ -148,7 +151,7 @@ gulp.task('otf2ttf', function () {
 		.pipe(dest(source_folder + '/fonts/'));
 });
 
-function fontsStyle() {
+gulp.task('fontsStyle', function () {
 	let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
 	if (file_content == '') {
 		fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
@@ -166,7 +169,7 @@ function fontsStyle() {
 			}
 		});
 	}
-}
+});
 
 function cb() {}
 
@@ -181,11 +184,11 @@ function clean() {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
-let watch = gulp.parallel(build, watchFiles, browserSync);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+let watch = gulp.parallel(watchFiles, browserSync);
+let complete = gulp.parallel(build, watch);
 
 exports.clean = clean;
-exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
@@ -193,4 +196,5 @@ exports.css = css;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
-exports.default = watch;
+exports.complete = complete;
+exports.default = complete;

@@ -1,0 +1,42 @@
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('../fonts/#{$font_name}/#{$file_name}.woff') format('woff'), url('../fonts/#{$font_name}/#{$file_name}.woff2') format('woff2');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//Адаптивное свойство
+@mixin adaptiv-value($property, $startValue, $minValue, $startWidth, $endWidth) {
+	@media (max-width: #{$startWidth + 'px'}) {
+		#{$property}: calc(#{$minValue + 'px'} + #{$startValue - $minValue} * ((100vw - #{$endWidth + 'px'}) / #{$startWidth - $endWidth}));
+	}
+	@media (max-width: #{$endWidth + 'px'}) {
+		#{$property}: $minValue + px;
+	}
+}
+
+// @mixin common-value($property, $value) {
+// 	#{$property}: #{$value + px};
+// 	@media (max-width: $md1+px) {
+// 		#{$property}: calc(#{4 / 7 * $value + 'px'} + #{3 / 7 * $value} * ((100vw - #{$minWidth + px}) / (#{$md1 - $minWidth})));
+// 	}
+// }
+
+@mixin common-value($property, $value) {
+	$v3: #{$value * 3/4};
+	$v12: #{$value * 1.5/4};
+	#{$property}: #{$value + px};
+	@media (max-width: $md2 + px) {
+		#{$property}: #{$v3 + px};
+	}
+	@media (max-width: $md3 + px) {
+		#{$property}: calc(#{$v12 + px} + #{$v12} * ((100vw - #{$minWidth + px}) / (#{$md3 - $minWidth})));
+	}
+	@media (max-width: $minWidth + px) {
+		#{$property}: #{$v12 + px};
+	}
+}

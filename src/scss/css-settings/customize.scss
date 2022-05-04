@@ -1,0 +1,239 @@
+body {
+	color: $colorTextDark;
+	// @media (min-width: $md1+px) {
+	// 	font-size: 20px;
+	// }
+	@media (min-width: $md2+px) {
+		font-size: 20px;
+	}
+	// @media (min-width: $md3+px) {
+	// 	font-size: 20px;
+	// }
+	@media (min-width: $md4+px) {
+		font-size: 16px;
+	}
+	font-size: 14px;
+	line-height: 1.2;
+	font-weight: 400;
+	letter-spacing: 0em;
+	font-style: normal;
+}
+
+._bg {
+	background: $gBW;
+}
+
+._container {
+	margin: 0 auto;
+	@media (min-width: $md1+px) {
+		max-width: $maxWidthContainer + px;
+	}
+	@media (min-width: $md2+px) {
+		max-width: $laptopContainer + px;
+	}
+	@media (min-width: $md3+px) {
+		max-width: $padContainer + px;
+	}
+	// @media (max-width: $md3+px) {
+	// 	max-width: $mobileContainer + px;
+	// }
+	@media (max-width: $md3+px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media (max-width: $md4+px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+._button {
+	transition: all 0.3s ease;
+	cursor: pointer;
+	font-family: 'SF-Pro-Display';
+	// font-size: 16px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	column-gap: 4px;
+	padding: 7px 15px;
+	border-radius: 2px;
+	color: $white;
+	background-color: $blue;
+	&:hover {
+		box-shadow: 0 0 4px #{$black + '40'};
+	}
+	&:active {
+		transform: translateY(2px);
+		box-shadow: 0 0px 2px #{$black + '40'};
+	}
+	&--white {
+		color: $colorTextDark;
+		background-color: $white;
+		border: 1px solid $borderGray;
+		box-shadow: 0 0 2px #{$black + '15'};
+		&::before {
+			color: $colorTextGray;
+		}
+	}
+}
+
+._h1 {
+	@media (min-width: $md2+px) {
+		font-size: 39/20 + em;
+		line-height: (45.7/39);
+	}
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+._h2 {
+	@media (min-width: $md2+px) {
+		font-size: 36/20 + em;
+		line-height: (42.19/36);
+	}
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+._fs24 {
+	@media (min-width: $md2+px) {
+		font-size: 24/20 + em;
+		line-height: (28/24);
+	}
+	font-size: 1.1em;
+}
+._fs18 {
+	@media (min-width: $md2+px) {
+		font-size: 18/20 + em;
+	}
+	font-size: 1em;
+}
+._fs16 {
+	@media (min-width: $md2+px) {
+		font-size: 16/20 + em;
+		line-height: (24/16);
+	}
+	font-size: 0.9em;
+}
+._fs12 {
+	@media (min-width: $md2+px) {
+		font-size: 12/20 + em;
+		line-height: (20/12);
+	}
+	font-size: 0.8em;
+}
+
+// ._button--main {
+// 	color: $colorLight;
+// 	background-color: $colorMain;
+// 	&:hover {
+// 		background-color: $colorMainHover;
+// 	}
+// }
+
+// ._title {
+// 	text-transform: uppercase;
+// 	font-size: 2em;
+// 	font-weight: 700;
+// 	line-height: 43px;
+// 	text-align: center;
+// 	@include common-value('padding-top', 12);
+// 	@include common-value('padding-bottom', 12);
+// 	color: $colorTextGray;
+// }
+
+// ._underline {
+// 	position: relative;
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		width: calc(100% + 15px);
+// 		height: 1px;
+// 		background-color: $colorText;
+// 		transition: width 0.3s ease-out;
+// 		@include common-value('bottom', -1);
+// 	}
+// }
+
+// ._cross {
+// 	cursor: pointer;
+// 	padding: 20px;
+// 	&::after,
+// 	&::before {
+// 		position: absolute;
+// 		top: 19px;
+// 		right: 10px;
+// 		content: '';
+// 		width: 20px;
+// 		height: 2px;
+// 	}
+// 	&::after {
+// 		transform: rotate(45deg);
+// 	}
+// 	&::before {
+// 		transform: rotate(-45deg);
+// 	}
+// }
+
+// ._arrow {
+// 	position: relative;
+// 	padding-left: 20px;
+// 	&::after,
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		width: 10px;
+// 		height: 2px;
+// 		background-color: $colorText;
+// 		border-radius: 25%;
+// 		transition: all 0.5s ease;
+// 	}
+// 	&::after {
+// 		top: calc(50% + 1px);
+// 		transform: rotate(50deg);
+// 		right: -4px;
+// 	}
+// 	&::before {
+// 		top: calc(50% + 1px);
+// 		transform: rotate(130deg);
+// 	}
+// 	&._active {
+// 		&::after {
+// 			transform: rotate(130deg);
+// 		}
+
+// 		&::before {
+// 			transform: rotate(40deg);
+// 			bottom: calc(50% + 2px);
+// 			right: 12px;
+// 		}
+// 	}
+// }
+
+// .swiper .swiper-pagination-bullet {
+// 	transition: background-color 0.4s linear;
+// 	@media (min-width: $md1+px) {
+// 		width: 20px;
+// 		height: 20px;
+// 		margin-right: 30px;
+// 	}
+// 	@media (min-width: $md2+px) {
+// 		width: 14px;
+// 		height: 14px;
+// 		margin-right: 20px;
+// 		background-color: $colorLight;
+// 	}
+// 	width: 10px;
+// 	height: 10px;
+// 	margin-right: 13px;
+
+// 	&-active {
+// 		@media (min-width: $md2+px) {
+// 			background-color: $colorText;
+// 		}
+// 	}
+// 	&:last-child {
+// 		margin-right: 0;
+// 	}
+// }
