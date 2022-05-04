@@ -106,15 +106,12 @@
 		font-weight: 700;
 	}
 
-	&__time-wraper {
+	&__time {
+		color: $white;
 		background-color: $black;
 		margin-left: 20px;
 		padding: 1px 8px;
 		border-radius: 2px;
-	}
-
-	&__time {
-		color: $white;
 	}
 
 	&__info-bottom {

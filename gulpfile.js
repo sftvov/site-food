@@ -197,4 +197,4 @@ exports.html = html;
 exports.build = build;
 exports.watch = watch;
 exports.complete = complete;
-exports.default = complete;
+exports.default = watch;
