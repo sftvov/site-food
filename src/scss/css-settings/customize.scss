@@ -51,12 +51,10 @@ body {
 	transition: all 0.3s ease;
 	cursor: pointer;
 	font-family: 'SF-Pro-Display';
-	// font-size: 16px;
-	line-height: 24px;
 	display: flex;
 	align-items: center;
 	column-gap: 4px;
-	padding: 7px 15px;
+	padding: 8px 16px;
 	border-radius: 2px;
 	color: $white;
 	background-color: $blue;
@@ -78,16 +76,16 @@ body {
 	}
 }
 
-._h1 {
+._fs39 {
 	@media (min-width: $md2+px) {
 		font-size: 39/20 + em;
 		line-height: (45.7/39);
 	}
-	font-size: 1.4em;
+	font-size: 1.35em;
 	font-weight: 700;
 }
 
-._h2 {
+._fs36 {
 	@media (min-width: $md2+px) {
 		font-size: 36/20 + em;
 		line-height: (42.19/36);
@@ -103,18 +101,21 @@ body {
 	}
 	font-size: 1.1em;
 }
+._fs20 {
+	font-size: 1em;
+}
 ._fs18 {
 	@media (min-width: $md2+px) {
 		font-size: 18/20 + em;
 	}
-	font-size: 1em;
+	font-size: 0.9em;
 }
 ._fs16 {
 	@media (min-width: $md2+px) {
 		font-size: 16/20 + em;
 		line-height: (24/16);
 	}
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 ._fs12 {
 	@media (min-width: $md2+px) {
@@ -123,14 +124,6 @@ body {
 	}
 	font-size: 0.8em;
 }
-
-// ._button--main {
-// 	color: $colorLight;
-// 	background-color: $colorMain;
-// 	&:hover {
-// 		background-color: $colorMainHover;
-// 	}
-// }
 
 // ._title {
 // 	text-transform: uppercase;
@@ -156,25 +149,27 @@ body {
 // 	}
 // }
 
-// ._cross {
-// 	cursor: pointer;
-// 	padding: 20px;
-// 	&::after,
-// 	&::before {
-// 		position: absolute;
-// 		top: 19px;
-// 		right: 10px;
-// 		content: '';
-// 		width: 20px;
-// 		height: 2px;
-// 	}
-// 	&::after {
-// 		transform: rotate(45deg);
-// 	}
-// 	&::before {
-// 		transform: rotate(-45deg);
-// 	}
-// }
+._cross {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	&::after,
+	&::before {
+		position: absolute;
+		content: '';
+		width: 20px;
+		height: 2px;
+	}
+	&::after {
+		transform: rotate(45deg);
+	}
+	&::before {
+		transform: rotate(-45deg);
+	}
+}
 
 // ._arrow {
 // 	position: relative;

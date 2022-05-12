@@ -1,0 +1,117 @@
+.dishes {
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__title-block {
+		display: flex;
+		align-items: center;
+		@include common-value('margin-top', 40);
+		@include common-value('margin-bottom', 44.01);
+	}
+
+	&__title {
+		font-weight: 700;
+		@include common-value('margin-right', 30);
+	}
+
+	&__rating {
+		color: $colorBright;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		@include common-value('margin-right', 26);
+		&::before {
+			font-size: 14.08px;
+			position: relative;
+			bottom: 2px;
+			margin-right: 7.5px;
+		}
+	}
+
+	&__price {
+		color: $colorTextGray;
+		margin-right: 10px;
+	}
+
+	&__category {
+		color: $colorTextGray;
+		&::before {
+			content: '';
+			position: relative;
+			top: -4px;
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			margin-right: 10px;
+			border-radius: 50%;
+			background-color: $colorTextGray;
+			@media (max-width: $md3+px) {
+				top: -3px;
+				width: 3px;
+				height: 3px;
+			}
+		}
+	}
+
+	&__grid {
+		display: grid;
+		justify-items: center;
+		@media (min-width: $md1+px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (min-width: $md2+px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (min-width: $md4+px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		grid-template-columns: 1fr;
+		@include common-value('column-gap', 24);
+		@include common-value('row-gap', 30);
+		@include common-value('margin-top', 44.01);
+	}
+
+	&__dish {
+	}
+}
+.dish {
+	&__image {
+		width: 100%;
+		& img {
+			border-radius: 7px 7px 0 0;
+			width: 100%;
+			aspect-ratio: 384/250;
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__title {
+		flex-basis: 100%;
+		@include common-value('margin-top', 24.76);
+	}
+
+	&__description {
+		color: $colorTextGray;
+		flex-basis: 100%;
+		@include common-value('margin-top', 10);
+		@include common-value('margin-bottom', 24.76);
+	}
+
+	&__button {
+		@include common-value('margin-right', 32);
+	}
+
+	&__price {
+		font-weight: bold;
+	}
+}

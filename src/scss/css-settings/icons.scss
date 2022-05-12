@@ -1,4 +1,5 @@
-[class*='_icon-']:before {
+[class*='_icon-']:before,
+[class*='_icon-a-']:after {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icons' !important;
 	speak: never;
@@ -18,6 +19,9 @@
 	content: '\e900';
 }
 ._icon-basket:before {
+	content: '\e901';
+}
+._icon-a-basket:after {
 	content: '\e901';
 }
 ._icon-search:before {

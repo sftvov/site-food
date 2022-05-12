@@ -72,7 +72,7 @@ function popup_open(item, video = '') {
 	if (activePopup.length > 0) {
 		popup_close('', false);
 	}
-	let curent_popup = document.querySelector('.popup_' + item);
+	let curent_popup = document.querySelector('.popup-' + item);
 	if (curent_popup && unlock) {
 		if (video != '' && video != null) {
 			let popup_video = document.querySelector('.popup_video');

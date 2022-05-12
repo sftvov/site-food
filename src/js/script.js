@@ -36,7 +36,7 @@ let body = document.querySelector('body');
 // include('elements/burger.js');
 // include('elements/search.js');
 // include('elements/tabs.js');
-// include('elements/popups.js');
+@@include('elements/popups.js');
 // include('elements/sliders.js');
 // include('elements/gallery.js');
 // include('elements/scroll.js');
